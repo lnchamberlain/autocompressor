@@ -12,42 +12,18 @@ $ autocompressor [action] [file(s)] [options]
 ```
 actions: 
 
-  -c, --compress: compress files into encoded data and decompression model
+  -c, --compress: File to be compressed -c [FILE]
+        
+  -d, --decompress: Encoded pickle file to be decompressed -d [ENCODED-FILE.pckl], decompression model must be in same directory and be named {encoded-file-name}-model.pckl
   
-      File Requirements:
-      
-        -o, --original: file to be compressed
         
-  -d, --decompress: restore original
+  -v --verify: Verify the decompression of a file -v [ORIGINAL-FILE] [DECOMPRESSED-FILE]
   
-      File Requirements:
-      
-        -e, --encoded: encoded data
-        
-        -m, --model: decoder model
-        
-  -v --verify: check parity between original and decompressed
-  
-      File Requirements:
-      
-        -o, --original: original file
-        
-        -r, --restored: decompressed file
-        
-  -cd, --compress-directory: compresses all files in target directory
-  
-      File Requirements:
-      
-         -p, --path: path to target directory
+  -cd, --compress-directory: Compress all files in directory -cd [PATH]
          
-  -dd, --decompress-directory: decompresses all the encoded files in a target directory
-  
-      File Requirements:
-      
-        -p, --path: path to compressed directory file
-        
-  
+  -dd, --decompress-directory: Decompress all compressed files in a directory -dd [PATH]
+ 
  options:
  
-    -od, --output_directory: directory to create files in
+    -od, --output_directory: Path to output directory if not cwd -od [PATH]
     
