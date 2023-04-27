@@ -12,8 +12,11 @@ $ autocompressor [action] [file(s)] [options]
 ```
 actions: 
   -c, --compress: compress files into encoded data and decompression model
+  
       File Requirements:
+      
         -o, --original: file to be compressed
+        
   -d, --decompress: restore original
       File Requirements: 
         -e, --encoded: encoded data
